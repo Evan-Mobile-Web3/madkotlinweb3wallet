@@ -9,7 +9,6 @@ local.properties
 .cxx
 
 # IDE (IntelliJ / Android Studio)
-# 屏蔽整个 .idea 目录，防止个人配置污染
 .idea/
 *.iws
 *.out
@@ -17,6 +16,7 @@ local.properties
 
 # Node.js & Web
 node_modules/
+package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
