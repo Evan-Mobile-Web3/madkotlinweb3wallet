@@ -6,11 +6,12 @@ A modern Android Web3 wallet built with Kotlin and Jetpack Compose.
 
 This project follows the recommended modern Android development practices.
 
-- **`app`**: The main application module.
+- **`app`**: The main application module (Android).
     - **`data`**: Implements the domain repository interfaces, handles data sources (Local, Remote).
     - **`domain`**: Contains the business logic (UseCases) and repository interfaces.
     - **`ui`**: Contains the UI layer (Compose screens, ViewModels, Theme).
     - **`di`**: Dependency Injection configuration.
+- **`server`**: Lightweight Node.js (Express) backend service.
 - **`docs`**: Project documentation.
 
 ## Tech Stack
@@ -25,4 +26,4 @@ This project follows the recommended modern Android development practices.
 
 | 1. Connect Screen | 2. Auth Success | 3. Wallet Dashboard |
 | :---: | :---: | :---: |
-| ![Connect Screen](screenshots/connect_screen.png) | ![Auth Success](screenshots/auth_success.png) | ![Wallet Dashboard](screenshots/dashboard.png) |
+| <img src="screenshots/connect_screen.png" height="500"> | <img src="screenshots/auth_success.png" height="500"> | <img src="screenshots/dashboard.png" height="500"> |
