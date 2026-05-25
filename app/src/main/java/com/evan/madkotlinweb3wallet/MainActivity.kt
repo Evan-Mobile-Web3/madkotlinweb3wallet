@@ -13,6 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MadKotlinWeb3WalletTheme {
+                // for test use
                 MainScreen()
             }
         }

@@ -56,6 +56,14 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     // 生命周期运行时 Kotlin 扩展：让 Compose 能够感知 Activity/Fragment 的生命周期变化
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    // ViewModel 在 Compose 中的支持：提供 viewModel() 方法
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    // Compose Navigation: 处理页面间的跳转与参数传递
+    implementation(libs.androidx.navigation.compose)
+    // Material Icons 扩展库：提供更多的系统图标（如 ArrowDropDown）
+    implementation("androidx.compose.material:material-icons-extended")
+    // Coil: 图片加载库，用于加载网络上的狐狸图标
+    implementation(libs.coil.compose)
 
     // 单元测试库：用于编写纯逻辑的测试代码（在 JVM 上运行）
     testImplementation(libs.junit)
