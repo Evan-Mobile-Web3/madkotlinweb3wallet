@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.util.Locale
 import kotlin.random.Random
 
 /**
@@ -42,13 +43,13 @@ class WalletViewModel : ViewModel() {
                 val mockAccounts = listOf(
                     WalletAccount("0x123...abc", "Main Account"),
                     WalletAccount("0x456...def", "Savings Account"),
-                    WalletAccount("0x789...ghi", "DeFi Wallet")
+                    WalletAccount("0x789...ghi", "DeFi Wallet"),
                 )
                 _uiState.update { 
                     it.copy(
                         status = WalletConnectionStatus.SUCCESS,
                         accounts = mockAccounts,
-                        selectedAccount = mockAccounts[0]
+                        selectedAccount = mockAccounts[0],
                     )
                 }
                 // 授权成功后开启心跳实时刷新余额
@@ -102,7 +103,7 @@ class WalletViewModel : ViewModel() {
         // 通过 .value 获取当前 Flow 中的最新状态
         _uiState.value.selectedAccount?.let {
             // 模拟从区块链获取余额
-            val randomBalance = String.format("%.4f", Random.nextDouble(0.1, 10.5))
+            val randomBalance = String.format(Locale.US, "%.4f", Random.nextDouble(0.1, 10.5))
             _uiState.update { state -> state.copy(balance = "$randomBalance ETH") }
         }
     }

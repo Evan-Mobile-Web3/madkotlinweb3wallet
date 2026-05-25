@@ -11,7 +11,7 @@ enum class WalletConnectionStatus {
 // 钱包账户信息数据模型
 data class WalletAccount(
     val address: String, // 钱包地址
-    val name: String     // 账户别名（如 Account 1）
+    val name: String,    // 账户别名（如 Account 1）
 )
 
 // 整个钱包界面的 UI 状态
@@ -20,5 +20,5 @@ data class WalletUiState(
     val accounts: List<WalletAccount> = emptyList(),                 // 账户列表
     val selectedAccount: WalletAccount? = null,                       // 当前选中的账户
     val balance: String = "0.00",                                     // 当前余额
-    val errorMessage: String? = null                                  // 错误提示信息
+    val errorMessage: String? = null,                                 // 错误提示信息
 )

@@ -22,11 +22,6 @@ import com.evan.madkotlinweb3wallet.domain.WalletConnectionStatus
 import com.evan.madkotlinweb3wallet.domain.WalletUiState
 import com.evan.madkotlinweb3wallet.domain.WalletAccount
 
-// MetaMask 狐狸图标的官方资源链接
-const val METAMASK_ICON_URL = "https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/Metamask-Logo.svg"
-// 备用 PNG 链接（以防 SVG 渲染有问题）
-const val METAMASK_ICON_PNG = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/512px-MetaMask_Fox.svg.png"
-
 /**
  * 应用主导航入口
  */
@@ -180,8 +175,8 @@ fun WalletDashboardScreen(
                         Text("MetaMask 钱包", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                     }
                 },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f)
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
                 )
             )
         }
