@@ -8,13 +8,11 @@ local.properties
 .externalNativeBuild
 .cxx
 
-# IDE
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+# IDE (IntelliJ / Android Studio)
+# 屏蔽整个 .idea 目录，防止个人配置污染
+.idea/
+*.iws
+*.out
 .DS_Store
 
 # Node.js & Web
