@@ -1,6 +1,14 @@
+# Android
 *.iml
 .gradle
 /local.properties
+local.properties
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# IDE
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -8,8 +16,12 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+
+# Node.js & Web
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+dist/
+build-web/

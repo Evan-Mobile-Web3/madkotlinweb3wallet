@@ -1,0 +1,12 @@
+{
+  "name": "mad-web3-server",
+  "version": "1.0.0",
+  "description": "Lightweight backend for Mad Kotlin Web3 Wallet",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
