@@ -20,3 +20,9 @@ This project follows the recommended modern Android development practices.
 - **Dependency Injection**: Hilt / Koin (Planned)
 - **Networking**: Retrofit / Ktor
 - **Architecture**: MVVM / MVI with Clean Architecture
+
+## Screenshots
+
+| 1. Connect Screen | 2. Auth Success | 3. Wallet Dashboard |
+| :---: | :---: | :---: |
+| ![Connect Screen](screenshots/connect_screen.png) | ![Auth Success](screenshots/auth_success.png) | ![Wallet Dashboard](screenshots/dashboard.png) |

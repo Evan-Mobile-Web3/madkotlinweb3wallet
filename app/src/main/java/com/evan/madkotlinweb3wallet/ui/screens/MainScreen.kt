@@ -17,10 +17,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.foundation.Image
+import androidx.compose.ui.tooling.preview.Preview
 import com.evan.madkotlinweb3wallet.R
 import com.evan.madkotlinweb3wallet.domain.WalletConnectionStatus
 import com.evan.madkotlinweb3wallet.domain.WalletUiState
 import com.evan.madkotlinweb3wallet.domain.WalletAccount
+import com.evan.madkotlinweb3wallet.ui.theme.MadKotlinWeb3WalletTheme
 
 /**
  * 应用主导航入口
@@ -239,5 +241,42 @@ fun WalletDashboardScreen(
                 }
             }
         }
+    }
+}
+
+@Preview(showBackground = true, name = "1. Connect Screen")
+@Composable
+fun ConnectScreenPreview() {
+    MadKotlinWeb3WalletTheme {
+        ConnectScreen(onConnectClick = {})
+    }
+}
+
+@Preview(showBackground = true, name = "2. Auth Success Screen")
+@Composable
+fun AuthSuccessScreenPreview() {
+    MadKotlinWeb3WalletTheme {
+        AuthScreen(
+            status = WalletConnectionStatus.SUCCESS,
+            error = null,
+            onRetry = {},
+            onComplete = {}
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "3. Wallet Dashboard Screen")
+@Composable
+fun WalletDashboardScreenPreview() {
+    MadKotlinWeb3WalletTheme {
+        WalletDashboardScreen(
+            uiState = WalletUiState(
+                status = WalletConnectionStatus.SUCCESS,
+                accounts = listOf(WalletAccount("0x123...abc", "Main Account")),
+                selectedAccount = WalletAccount("0x123...abc", "Main Account"),
+                balance = "1.2345 ETH"
+            ),
+            onAccountSelected = {}
+        )
     }
 }
